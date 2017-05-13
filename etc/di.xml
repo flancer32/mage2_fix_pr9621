@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- ************************************ -->
+    <!-- Magento 2 Framework classes override -->
+    <!-- ************************************ -->
+    <type name="Magento\Framework\DB\Query\BatchIteratorFactory">
+        <arguments>
+            <argument name="instanceName" xsi:type="string">Flancer32\FixPr9621\Fw\DB\Query\BatchIterator</argument>
+        </arguments>
+    </type>
+
+</config>
