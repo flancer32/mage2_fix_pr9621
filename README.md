@@ -13,6 +13,7 @@ $ cd ${DIR_MAGE_ROOT}
 $ composer require flancer32/mage2_fix_pr9621
 $ bin/magento module:enable Flancer32_FixPr9621
 $ bin/magento setup:upgrade
+$ bin/magento setup:static-content:deploy
 $ bin/magento cache:clean
 ```
 
@@ -36,6 +37,8 @@ $ cd ${DIR_MAGE_ROOT}
 $ bin/magento module:uninstall Flancer32_FixPr9621
 $ bin/magento setup:upgrade
 $ bin/magento setup:di:compile
+$ bin/magento setup:static-content:deploy
+$ bin/magento cache:clean
 ```
 
 Be patient, uninstall process (`bin/magento module:uninstall ...`) takes about 2-4 minutes. Remove `auth.json` file at the end:
