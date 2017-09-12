@@ -6,6 +6,7 @@
 namespace Flancer32\FixPr9621\Fw\DB\Query;
 
 use Magento\Framework\DB\Adapter\AdapterInterface;
+use Magento\Framework\DB\Query\BatchIteratorInterface;
 use Magento\Framework\DB\Select;
 
 /**
