@@ -9,13 +9,13 @@ use Magento\Framework\DB\Adapter\AdapterInterface;
 use Magento\Framework\DB\Select;
 
 /**
- * This class is copy of \Magento\Framework\DB\Query\BatchIterator (version 2.1.6)
+ * This class is copy of \Magento\Framework\DB\Query\BatchIterator (version 2.1.8)
  * with fixed 'calculateBatchSize()' method to prevent rows missing in re-index.
  *
  * https://github.com/magento/magento2/pull/9621
  *
  */
-class BatchIterator implements \Iterator
+class BatchIterator implements BatchIteratorInterface
 {
     /**
      * @var int
@@ -73,7 +73,8 @@ class BatchIterator implements \Iterator
         $correlationName,
         $rangeField,
         $rangeFieldAlias
-    ) {
+    )
+    {
         $this->batchSize = $batchSize;
         $this->select = $select;
         $this->correlationName = $correlationName;
@@ -128,7 +129,7 @@ class BatchIterator implements \Iterator
     }
 
     /**
-     * @return Select
+     * {@inheritdoc}
      */
     public function current()
     {
@@ -163,7 +164,7 @@ class BatchIterator implements \Iterator
     }
 
     /**
-     * @return int
+     * {@inheritdoc}
      */
     public function key()
     {
@@ -171,7 +172,7 @@ class BatchIterator implements \Iterator
     }
 
     /**
-     * @return Select
+     * {@inheritdoc}
      */
     public function next()
     {
@@ -191,7 +192,7 @@ class BatchIterator implements \Iterator
     }
 
     /**
-     * @return void
+     * {@inheritdoc}
      */
     public function rewind()
     {
@@ -202,7 +203,7 @@ class BatchIterator implements \Iterator
     }
 
     /**
-     * @return bool
+     * {@inheritdoc}
      */
     public function valid()
     {
