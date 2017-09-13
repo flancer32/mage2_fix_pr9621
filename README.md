@@ -5,7 +5,7 @@ Standalone fix for [PR-9621](https://github.com/magento/magento2/pull/9621) to v
 Related issues: [#7968](https://github.com/magento/magento2/issues/7968), [#8018](https://github.com/magento/magento2/issues/8018).
 
 * v. 2.1.7 still [contains](https://github.com/magento/magento2/blob/2.1.7/lib/internal/Magento/Framework/DB/Query/BatchIterator.php#L156) this error (use [v. 0.1.0](https://github.com/flancer32/mage2_fix_pr9621/releases/tag/0.1.0) for Magento 2.1.7).
-* v. 2.1.8: under investigation in this moment.
+* v. 2.1.8: fixed.
 
 ## Install
 
